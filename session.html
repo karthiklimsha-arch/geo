@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculty Dashboard - Geo Attendance</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI", Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:#132c4b;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+color:white;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:600;
+}
+
+.home-btn{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+/* PAGE BACKGROUND */
+
+body{
+height:100vh;
+background-image:url("file:///C:/Users/Sreehari/Downloads/geo/Gemini_Generated_Image_k7wupuk7wupuk7wu.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:flex;
+flex-direction:column;
+}
+
+/* DASHBOARD CONTAINER */
+
+.dashboard-container{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* DASHBOARD BOX */
+
+.dashboard-box{
+background:rgba(255,255,255,0.95);
+padding:40px;
+border-radius:12px;
+width:400px;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+text-align:center;
+}
+
+.dashboard-box h2{
+margin-bottom:25px;
+color:#132c4b;
+}
+
+/* BUTTON */
+
+.session-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+background:#132c4b;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+margin-bottom:20px;
+}
+
+.session-btn:hover{
+background:#0b1f36;
+}
+
+/* ACTIVE SESSION TEXT */
+
+.session-display{
+font-size:18px;
+font-weight:600;
+color:#132c4b;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+<i class="fas fa-chalkboard-teacher"></i>
+Faculty Dashboard
+</div>
+
+<a href="file:///C:/Users/Sreehari/Downloads/geo/geohome.html.html" class="home-btn">
+<i class="fas fa-home"></i> Home
+</a>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard-container">
+
+<div class="dashboard-box">
+
+<h2>Faculty Dashboard</h2>
+
+<button class="session-btn" onclick="generateSession()">
+Generate Session
+</button>
+
+<div class="session-display" id="sessionText">
+Active Session: None
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function generateSession(){
+
+let timestamp = Date.now();
+let sessionID = "SESSION_" + timestamp;
+
+document.getElementById("sessionText").innerText =
+"Active Session: " + sessionID;
+
+}
+
+</script>
+
+</body>
+</html>
